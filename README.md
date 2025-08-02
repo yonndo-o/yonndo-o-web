@@ -1,3 +1,65 @@
+src/
+├─ app/
+│  ├─ layout.tsx
+│  ├─ globals.css
+│  ├─ page.tsx                  # 首頁
+|  ├─ lang.tsx 
+│  ├─ about/
+│  │  ├─ page.tsx               # 關於我們頁面
+|  |  └─ lang.tsx
+│  ├─ contact/
+│  │  ├─ page.tsx               # 聯絡我們頁面
+|  |  └─ lang.tsx
+│  └─ dashboard/
+│     ├─ layout.tsx             # 儀表板專屬排版
+│     ├─ page.tsx               # 儀表板首頁
+|     ├─ lang.tsx
+│     ├─ settings/
+│     │  ├─ page.tsx            # 使用者設定
+|     |  └─ lang.tsx
+│     └─ analytics/
+│        ├─ page.tsx            # 數據分析
+|        └─ lang.tsx
+│
+├─ components/
+│  ├─ ui/
+│  │  ├─ Button.tsx
+│  │  ├─ Modal.tsx
+│  │  └─ Card.tsx
+│  ├─ layout/
+│  │  ├─ Header.tsx
+│  │  ├─ Footer.tsx
+│  │  └─ Sidebar.tsx
+│  ├─ forms/
+│  |  ├─ ContactForm.tsx
+│  |  └─ SettingsForm.tsx
+│  └─ lang.tsx
+├─ lib/
+│  ├─ api.ts
+│  ├─ auth.ts
+│  └─ utils.ts
+│
+├─ assets/
+│  ├─ images/
+│  │  ├─ logo.png
+│  │  └─ banner.jpg
+│  └─ icons/
+│     ├─ home.svg
+│     └─ settings.svg
+│
+├─ styles/
+│  ├─ variables.css
+│  └─ themes.css
+│
+└─ i18n/
+   ├─ config.ts
+   ├─ useTranslation.ts
+   └─ translations/
+      ├─ en.ts
+      ├─ zh.ts
+      └─ index.ts
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
