@@ -1,6 +1,6 @@
 import { Language } from './translations';
 
-const DEFAULT_LANGUAGE: Language = 'zh';
+const DEFAULT_LANGUAGE: Language = 'en';
 
 export function detectLanguage(): Language {
   if (typeof window === 'undefined') return DEFAULT_LANGUAGE;

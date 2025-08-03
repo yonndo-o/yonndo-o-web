@@ -1,7 +1,7 @@
 'use client';
 
-import { useLang } from '@/i18n/LanguageProvider';
 import { useState, useEffect } from 'react';
+import { useLang } from '@/i18n/LanguageProvider';
 
 const translations = {
   zh: { toggleLang: "切換語言" },
@@ -12,8 +12,16 @@ type Lang = keyof typeof translations;
 
 export default function LanguageToggle() {
   const { changeLanguage } = useLang();
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      // 安全地使用 document
+      const lang = document.documentElement.lang;
+      console.log(lang);
+    }
+  }, []);
+
   const [lang, setLang] = useState<Lang>(() =>
-    (document.documentElement.lang as Lang) || 'zh'
+    (document.documentElement.lang as Lang) || 'en'
   );
 
   useEffect(() => {
