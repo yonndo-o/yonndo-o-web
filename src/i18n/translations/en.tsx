@@ -11,10 +11,14 @@ const en = {
     description: "A place for thoughts and ideas.",
   },
   components: {
-    title: "Yonndo's Blog",
-    footer: "© 2025 Yonndo All rights reserved",
+    title: "Quatre's Blog",
+    footer: "© 2025 Quatre All rights reserved",
     toggleLang: "Switch Language",
     toggleTheme: "Toggle Theme",
+    fontSize:
+    {
+      text:'Font Size'
+    }
   }
 };
 

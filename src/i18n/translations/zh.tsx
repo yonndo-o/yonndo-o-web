@@ -11,10 +11,14 @@ const zh = {
     description: "一個分享想法與故事的地方。",
   },
   components: {
-    title: "永晴的部落格",
-    footer: "版權所有 © 2025 永晴",
+    title: "四季的部落格",
+    footer: "版權所有 © 2025 四季",
     toggleLang: "切換語言",
     toggleTheme: "切換主題",
+    fontSize:
+    {
+      text: '字體大小'
+    }
   }
 };
 
