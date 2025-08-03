@@ -37,7 +37,7 @@ export default function LanguageToggle() {
     <button
       onClick={toggleLang}
       aria-label={translations[lang].toggleLang}
-      className="px-2 py-1 rounded bg-gray-200 text-black hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-neutral-500 transition-colors duration-200"
+      className="button flex items-center px-2 py-1 text-sm sm:text-base rounded transition duration-300"
     >
       🌐 {lang.toUpperCase()}
     </button>
