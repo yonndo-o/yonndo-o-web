@@ -22,13 +22,6 @@ const FontSizeButton: React.FC = () => {
 
   const { t } = useLang();
 
-  useEffect(() => {
-    const saved = localStorage.getItem('font-scale') as typeof currentScale;
-    if (scaleOrder.includes(saved)) {
-      applyFontScale(saved);
-    }
-  }, []);
-
   return (
     <button
       className="button flex items-center px-2 py-1 text-sm sm:text-base rounded transition duration-300"

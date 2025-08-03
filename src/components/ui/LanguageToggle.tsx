@@ -12,18 +12,15 @@ type Lang = keyof typeof translations;
 
 export default function LanguageToggle() {
   const { changeLanguage } = useLang();
+  const [lang, setLang] = useState<Lang>('en'); // 初始值延後由 useEffect 設定
+
+  // 初始化語言設定（僅在 client 執行）
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      // 安全地使用 document
-      const lang = document.documentElement.lang;
-      console.log(lang);
-    }
+    const currentLang = document?.documentElement.lang as Lang;
+    setLang(currentLang || 'en');
   }, []);
 
-  const [lang, setLang] = useState<Lang>(() =>
-    (document.documentElement.lang as Lang) || 'en'
-  );
-
+  // 當語言切換時更新 <html lang>
   useEffect(() => {
     document.documentElement.lang = lang;
     changeLanguage(lang);

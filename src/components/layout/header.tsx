@@ -7,12 +7,6 @@ import ThemeToggleButton from '@/components/ui/ThemeToggleButton';
 
 export default function Header() {
   const { t } = useLang();
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
-    document.documentElement.classList.toggle('dark', dark);
-  }, [dark]);
 
   return (
     <header className="flex items-center justify-between px-4 py-2 border-b border-gray-300">
