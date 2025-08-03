@@ -1,5 +1,4 @@
-// app/layout.tsx
-import './globals.css';
+import '@/styles/globals.css';
 import Header from '../components/layout/header';
 import Footer from '../components/layout/footer';
 import { LanguageProvider } from '@/i18n/LanguageProvider';
@@ -14,6 +13,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const handleIncreaseFont = () => {
+    const currentScale = document.documentElement.getAttribute('data-font-scale') || 'md';
+    const scaleOrder = ['sm', 'md', 'lg', 'xl'];
+    const currentIndex = scaleOrder.indexOf(currentScale);
+    const nextScale = scaleOrder[Math.min(currentIndex + 1, scaleOrder.length - 1)];
+
+    document.documentElement.setAttribute('data-font-scale', nextScale);
+  };
+
   return (
     <html>
       <body>

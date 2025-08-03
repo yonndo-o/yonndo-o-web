@@ -6,7 +6,14 @@ export default function Footer() {
   const { t } = useLang();
 
   return (
-    <footer className="text-center py-4 text-gray-500">
+    <footer
+      className="text-center py-4"
+      style={{
+        backgroundColor: 'var(--footer-transparent)',
+        color: 'var(--foreground)',
+        transition: 'var(--transition)',
+      }}
+    >
       {t('components.footer')}
     </footer>
   );

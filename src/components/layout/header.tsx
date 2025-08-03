@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { useLang } from '@/i18n/LanguageProvider';
 import LanguageToggle from '../ui/LanguageToggle';
+import FontSizeButton from '@/components/ui/FontSizeButton/FontSizeButton';
+import ThemeToggleButton from '@/components/ui/ThemeToggleButton';
 
 export default function Header() {
   const { t } = useLang();
@@ -13,20 +15,15 @@ export default function Header() {
   }, [dark]);
 
   return (
-    <header style={{
-      padding: '1rem',
-      borderBottom: '1px solid #ccc',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center'
-    }}>
-      <h1 style={{ margin: 0, fontSize: '1.5rem' }}>{t('components.title')}</h1>
+    <header className="flex items-center justify-between px-4 py-2 border-b border-gray-300">
+      <h1 className="text-lg sm:text-xl font-semibold m-0">
+        {t('components.title')}
+      </h1>
 
-      <div style={{ display: 'flex', gap: '1rem' }}>
+      <div className="flex gap-2 sm:gap-4 items-center">
         <LanguageToggle />
-        <button onClick={() => setDark(!dark)} aria-label={t('components.toggleTheme')}>
-          {dark ? '☀️' : '🌙'}
-        </button>
+        <FontSizeButton />
+        <ThemeToggleButton />
       </div>
     </header>
   );
