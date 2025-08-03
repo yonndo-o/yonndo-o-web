@@ -74,3 +74,7 @@ select:focus {
   z-index: 1000;
 }
 
+#main
+{
+  height: 100vh;
+}
