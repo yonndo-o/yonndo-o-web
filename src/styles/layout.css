@@ -1,0 +1,14 @@
+footer {
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 2rem 1rem;
+  background-color: #ece8df;
+  color: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: #222;
+    color: #aaa;
+  }
+}

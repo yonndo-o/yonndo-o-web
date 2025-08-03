@@ -1,0 +1,25 @@
+:root {
+    --background: #FEDFE1;
+    --foreground: #562E37;
+    --link: #5c4033;
+
+    --font-sans: "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+    --font-serif: "Noto Serif TC", "Georgia", serif;
+    --font-mono: Menlo, Monaco, monospace;
+
+    --accent: #b3d671;
+    --accent-dark: #a1c95d;
+
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+    --footer-transparent: rgba(161, 201, 93, 0.2);
+}
+
+[data-theme="dark"] {
+    --background: #3C2F41;
+    --foreground: #B4A582;
+    --accent: #b3d671;
+    --accent-dark: #a1c95d;
+    --link: #f5e8cc;
+    --footer-transparent: rgba(161, 201, 93, 0.2);
+}
