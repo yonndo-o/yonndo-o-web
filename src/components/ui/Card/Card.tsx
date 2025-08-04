@@ -1,28 +1,37 @@
 'use client';
 
 import React from 'react';
-import styles from './FontSizeButton.module.css';
 
-const FontSizeButton = () => {
-  const handleClick = () => {
-    const scaleOrder = ['sm', 'md', 'lg', 'xl'];
-    const currentScale = document.documentElement.getAttribute('data-font-scale') || 'md';
-    const currentIndex = scaleOrder.indexOf(currentScale);
-    const nextScale = scaleOrder[Math.min(currentIndex + 1, scaleOrder.length - 1)];
-
-    document.documentElement.setAttribute('data-font-scale', nextScale);
-  };
+const GlassCard = () => {
 
   return (
-    <button
-      className={styles.button}
-      onClick={handleClick}
-      aria-label="Increase font size"
+    <div
+      className="
+        bg-white/10
+        backdrop-blur-md
+        rounded-xl
+        p-6
+        shadow-lg
+        border border-white/20
+        transition-all
+        duration-300
+
+        w-full
+        sm:w-[80%]
+        md:w-[60%]
+        lg:w-[50%]
+        xl:w-[40%]
+        mx-auto
+      "
+      style={{
+        color: 'var(--foreground)', // 動態主題字色
+        backgroundColor: 'var(--background)', // 可選擇是否加上
+      }}
     >
-      <span className={styles.icon}>A+</span>
-      <span className={styles.label}>Font Size</span>
-    </button>
+      <h2 className="text-2xl font-semibold mb-2">{"t('title')"}</h2>
+      <p className="text-base">{"context"}</p>
+    </div>
   );
 };
 
-export default FontSizeButton;
+export default GlassCard;
