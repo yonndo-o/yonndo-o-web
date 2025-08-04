@@ -1,7 +1,11 @@
 import '@/styles/globals.css';
 import Header from '../components/layout/header';
 import Footer from '../components/layout/footer';
+import Navbar from "../components/layout/Navbar";
+
+
 import { LanguageProvider } from '@/i18n/LanguageProvider';
+
 
 export const metadata = {
   title: 'Blog',
@@ -20,6 +24,7 @@ export default function RootLayout({
         <LanguageProvider>
           <a href="#main" className="skip-link">跳至主內容</a>
           <Header />
+          <Navbar />
           <main id="main">{children}</main>
           <Footer />
         </LanguageProvider>
