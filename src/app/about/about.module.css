@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.loginSection {
+  text-align: center;
+}
+
+.loginButton {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.loginButton:focus {
+  outline: 3px solid #000;
+}
+
+.userGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.userCard {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.userCard img {
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
