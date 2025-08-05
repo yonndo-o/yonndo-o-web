@@ -10,7 +10,7 @@ const translations = {
 
 type Lang = keyof typeof translations;
 
-export default function LanguageToggle() {
+export default function LanguageToggleButton() {
   const { changeLanguage } = useLang();
   const [lang, setLang] = useState<Lang>('en'); // 初始值延後由 useEffect 設定
 
