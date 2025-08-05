@@ -1,8 +1,10 @@
 .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem;
 }
 
 .loginSection {
@@ -11,7 +13,7 @@
 
 .loginButton {
   background-color: #4285f4;
-  color: white;
+  color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -33,15 +35,28 @@
 
 .userCard {
   border: 1px solid #ddd;
-  padding: 1rem;
   border-radius: 6px;
+  padding: 1rem;
   text-align: center;
+  background-color: #fafafa;
 }
 
-.userCard img {
-  border-radius: 50%;
+.userAvatar {
   width: 72px;
   height: 72px;
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.5rem;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
 }
