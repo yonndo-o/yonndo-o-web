@@ -18,10 +18,16 @@ body {
   transition: var(--transition);
 }
 
+header {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
 a {
   color: var(--link);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -43,6 +49,7 @@ select {
   background-color: #fff;
   color: var(--foreground);
 }
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -56,6 +63,7 @@ select:focus {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
 .skip-link {
   position: absolute;
   left: -10000px;
@@ -64,6 +72,7 @@ select:focus {
   height: 1px;
   overflow: hidden;
 }
+
 .skip-link:focus {
   position: static;
   width: auto;
@@ -74,7 +83,6 @@ select:focus {
   z-index: 1000;
 }
 
-#main
-{
+#main {
   height: 100vh;
 }
