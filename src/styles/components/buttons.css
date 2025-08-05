@@ -1,0 +1,45 @@
+/* --- 預設不渲染 .button 樣式 --- */
+.button {
+  all: unset; /* 移除所有預設樣式 */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* --- 大於 768px 才啟用原本樣式 --- */
+@media screen and (min-width: 768px) {
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    background: var(--button-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--button-border);
+    color: var(--button-text);
+    box-shadow: var(--button-shadow);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  .button:hover,
+  .button:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: var(--button-shadow-hover);
+    background: var(--button-hover-bg);
+  }
+
+  .button .icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: var(--icon-color);
+    font-weight: bold;
+  }
+
+  .button .label {
+    font-size: 1rem;
+    color: var(--label-color);
+  }
+}
