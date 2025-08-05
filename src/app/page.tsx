@@ -18,7 +18,7 @@ export default function HomePage() {
 >
       <h1>{t('homepage.welcome')}</h1>
       <p>{t('homepage.description')}</p>
-      <LoginForm />
+      {/* <LoginForm /> */}
 
     </main>
   );
