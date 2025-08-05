@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 import Header from '../components/layout/header';
 import Footer from '../components/layout/footer';
-import Navbar from "../components/layout/Navbar";
+import NavBar from "../components/ui/Navbar/NavBar";
 
 
 import { LanguageProvider } from '@/i18n/LanguageProvider';
@@ -24,7 +24,7 @@ export default function RootLayout({
         <LanguageProvider>
           <a href="#main" className="skip-link">跳至主內容</a>
           <Header />
-          <Navbar />
+          <NavBar />
           <main id="main">{children}</main>
           <Footer />
         </LanguageProvider>
