@@ -4,30 +4,40 @@ import { useState, useEffect } from 'react';
 import { useLang } from '@/i18n/LanguageProvider';
 
 const translations = {
-  zh: { toggleLang: "切換語言" },
-  en: { toggleLang: "Switch Language" },
+  zh: { toggleLang: '切換語言' },
+  en: { toggleLang: 'Switch Language' },
 } as const;
 
 type Lang = keyof typeof translations;
 
 export default function LanguageToggleButton() {
   const { changeLanguage } = useLang();
-  const [lang, setLang] = useState<Lang>('en'); // 初始值延後由 useEffect 設定
+  const [lang, setLang] = useState<Lang>('en');
 
-  // 初始化語言設定（僅在 client 執行）
+  // 初始化語言（從 localStorage 或 <html lang> 取得）
   useEffect(() => {
-    const currentLang = document?.documentElement.lang as Lang;
-    setLang(currentLang || 'en');
-  }, []);
+    const saved = localStorage.getItem('preferred-lang') as Lang | null;
+    const htmlLang = document.documentElement.lang as Lang | undefined;
 
-  // 當語言切換時更新 <html lang>
-  useEffect(() => {
-    document.documentElement.lang = lang;
-    changeLanguage(lang);
-  }, [lang, changeLanguage]);
+    const initialLang: Lang =
+      saved && ['en', 'zh'].includes(saved)
+        ? saved
+        : htmlLang && ['en', 'zh'].includes(htmlLang)
+        ? htmlLang
+        : 'en';
 
+    setLang(initialLang);
+    document.documentElement.lang = initialLang;
+    changeLanguage(initialLang);
+  }, [changeLanguage]);
+
+  // 切換語言
   const toggleLang = () => {
-    setLang(lang === 'zh' ? 'en' : 'zh');
+    const newLang: Lang = lang === 'zh' ? 'en' : 'zh';
+    setLang(newLang);
+    document.documentElement.lang = newLang;
+    localStorage.setItem('preferred-lang', newLang);
+    changeLanguage(newLang);
   };
 
   return (
