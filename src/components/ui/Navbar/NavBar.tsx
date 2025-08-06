@@ -16,15 +16,15 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="w-full bg-white border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ul className="flex flex-wrap gap-4 py-4 justify-center sm:justify-start text-sm sm:text-base md:text-lg">
-          {navItems.map((item) => (
-            <NavItem key={item.href} label={item.label} href={item.href} />
-          ))}
-        </ul>
-      </div>
-    </nav>
+<nav className="w-full bg-white border-b">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ul className="flex flex-wrap justify-between items-center py-4 text-sm sm:text-base md:text-lg">
+      {navItems.map((item) => (
+        <NavItem key={item.href} label={item.label} href={item.href} />
+      ))}
+    </ul>
+  </div>
+</nav>
   );
 };
 
