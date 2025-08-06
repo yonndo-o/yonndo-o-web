@@ -43,3 +43,104 @@
     color: var(--label-color);
   }
 }
+
+/* login.module.css */
+/* @import "../../styles/components/buttons.css"; */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loginSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.loginIcon {
+    width: 64px;
+    height: 64px;
+}
+
+/* .loginButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+/* --- 預設不渲染 .button 樣式 --- */
+.glassbutton {
+    all: unset;
+    /* 移除所有預設樣式 */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+
+.glassbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    background: var(--button-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--button-border);
+    color: var(--button-text);
+    box-shadow: var(--button-shadow);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.glassbutton:hover,
+.glassbutton:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: var(--button-shadow-hover);
+    background: var(--button-hover-bg);
+}
+
+.glassbutton .icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: var(--foreground);
+    font-weight: bold;
+}
+
+.glassbutton .label {
+    font-size: 1rem;
+    color: var(--foreground);
+}
+
+:root[data-theme='light'] {
+  --button-bg: rgba(255, 255, 255, 0.1);
+  --button-hover-bg: rgba(240, 255, 255, 0.15);
+  --button-text: #222;
+  --button-border: rgba(200, 200, 200, 0.4);
+  --button-shadow: 0 0 12px rgba(0, 150, 200, 0.3);
+  --button-shadow-hover: 0 0 20px rgba(0, 150, 200, 0.6);
+  --icon-color: #00bcd4;
+  --label-color: #333;
+  --foreground: #562E37;
+}
+
+:root[data-theme='dark'] {
+  --foreground: #B4A582;
+  --button-bg: rgba(30, 30, 30, 0.3);
+  --button-hover-bg: rgba(60, 60, 60, 0.4);
+  --button-text: #eee;
+  --button-border: rgba(255, 255, 255, 0.2);
+  --button-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+  --button-shadow-hover: 0 0 20px rgba(0, 255, 255, 0.6);
+  --icon-color: #a0ffff;
+  --label-color: #ffffff;
+}
