@@ -1,5 +1,13 @@
 const en = {
+  loginWithGoogle: 'Login',
   common: {
+    homepage: "Home Page",
+    personalInfo: "Personal Information",
+    articleRanking: "Article Rankings",
+    categoryTags: "Category Tags",
+    externalLinks: "External Links",
+    memberCenter: "Member Center",
+
     home: "Home",
     about: "About",
     contact: "Contact",
@@ -17,7 +25,7 @@ const en = {
     toggleTheme: "Toggle Theme",
     fontSize:
     {
-      text:'Font Size'
+      text: 'Font Size'
     }
   }
 };

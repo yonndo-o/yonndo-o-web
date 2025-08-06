@@ -1,6 +1,13 @@
 const zh = {
+  loginWithGoogle: '登入',
   common: {
+    personalInfo: "個人資訊",
+    articleRanking: "文章排行",
+    categoryTags: "分類標籤",
+    externalLinks: "外部連結",
+    memberCenter: "會員中心",
     home: "首頁",
+    homepage: "首頁",
     about: "關於我們",
     contact: "聯絡我們",
     language: "語言",
