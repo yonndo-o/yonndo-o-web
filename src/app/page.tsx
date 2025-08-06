@@ -1,7 +1,6 @@
 'use client';
 
 import { useLang } from '@/i18n/LanguageProvider';
-import LoginForm from "@/components/forms/LoginForm";
 
 export default function HomePage() {
   const { t } = useLang();
