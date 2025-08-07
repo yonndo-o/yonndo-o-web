@@ -4,6 +4,13 @@ import { getDatabase } from "firebase/database";
 import { getAuth } from "firebase/auth";
 import type { FirebaseApp } from "firebase/app";
 
+import { getFirestore } from "firebase/firestore";
+import { initializeFirestore } from "firebase/firestore";
+import { setLogLevel } from "firebase/firestore";
+setLogLevel("debug");
+
+
+
 // Firebase 設定檔
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -18,6 +25,13 @@ const firebaseConfig = {
 
 // 初始化 Firebase App
 export const app: FirebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+
+export const firestore = getFirestore(app);
+// export const firestore = initializeFirestore(app, {
+//   experimentalForceLongPolling: true,
+//   // useFetchStreams: false,
+// });
+
 
 // 匯出核心模組
 export const auth = getAuth(app);
