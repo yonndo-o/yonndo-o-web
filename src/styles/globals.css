@@ -87,7 +87,3 @@ select:focus {
   color: white;
   z-index: 1000;
 }
-
-#main {
-  height: 100vh;
-}
