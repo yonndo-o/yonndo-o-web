@@ -1,6 +1,35 @@
 const en = {
-  loginWithGoogle: 'Login',
+  profile: {
+    title: "Your Profile",
+    name: "Name",
+    email: "Email",
+    alias: "Alias",
+    birthdate: "Birthdate",
+    genderLabel: "Gender",
+    interests: "Interests",
+    skills: "Skills",
+    notProvided: "Not provided",
+    gender: {
+      male: "Male",
+      female: "Female",
+      other: "Other / Not specified",
+    },
+    visibility: {
+      show: "Visible",
+      hide: "Hidden",
+      toggle: "Toggle visibility",
+    },
+    editSuccess: "Profile updated successfully!",
+    editError: "Failed to update profile. Please try again.",
+  },
   common: {
+    save: "Save",
+    cancel: "Cancel",
+    logout: "Log out",
+    editProfile: "Edit Profile",
+    close: "Close",
+    login: 'Login',
+
     homepage: "Home Page",
     personalInfo: "Personal Information",
     articleRanking: "Article Rankings",
