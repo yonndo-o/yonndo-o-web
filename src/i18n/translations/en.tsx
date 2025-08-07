@@ -1,4 +1,10 @@
 const en = {
+  "article": {
+    "recentArticles": "Recent Articles",
+    "category": "Category",
+    "tags": "Tags",
+    "language": "Language"
+  },
   profile: {
     title: "Your Profile",
     name: "Name",

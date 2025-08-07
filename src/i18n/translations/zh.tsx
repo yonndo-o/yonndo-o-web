@@ -1,4 +1,10 @@
 const zh = {
+  "article": {
+    "recentArticles": "最新文章",
+    "category": "分類",
+    "tags": "標籤",
+    "language": "語言"
+  },
   profile: {
     title: "你的個人資料",
     name: "姓名",
