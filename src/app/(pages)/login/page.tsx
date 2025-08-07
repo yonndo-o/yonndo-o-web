@@ -27,7 +27,7 @@ export default function LoginPage() {
           className={'loginIcon'}
         />
         <button onClick={handleGoogleLogin} className='glassbutton'>
-          {t("loginWithGoogle")}
+          {t("common.login")}
         </button>
       </section>
     </main>
