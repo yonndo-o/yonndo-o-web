@@ -1,5 +1,6 @@
 'use client';
 
+import ArticleList from '@/components/ArticleList/ArticleList';
 import { useLang } from '@/i18n/LanguageProvider';
 
 export default function HomePage() {
@@ -17,8 +18,7 @@ export default function HomePage() {
 >
       <h1>{t('homepage.welcome')}</h1>
       <p>{t('homepage.description')}</p>
-      {/* <LoginForm /> */}
-
+      <ArticleList />
     </main>
   );
 }
