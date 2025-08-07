@@ -1,6 +1,6 @@
 'use client';
 
-import NavItem from '../NavItem/NnavItem';
+import NavItem from '../NavItem/NavItem';
 import { useLang } from '@/i18n/LanguageProvider';
 
 const NavBar = () => {
