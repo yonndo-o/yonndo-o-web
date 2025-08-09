@@ -1,0 +1,15 @@
+/* styles/components/nav/navbar.theme.css */
+
+:root[data-theme='light'] {
+  --navbar-bg: rgba(255, 255, 255, 0.6);
+  --navbar-border: rgba(200, 200, 200, 0.4);
+}
+
+:root[data-theme='dark'] {
+  --navbar-bg: rgba(30, 30, 30, 0.6);
+  --navbar-border: rgba(255, 255, 255, 0.2);
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+}

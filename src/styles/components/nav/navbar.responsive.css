@@ -1,0 +1,24 @@
+/* styles/components/nav/navbar.responsive.css */
+
+@media screen and (min-width: 640px) {
+  .navbar-inner {
+    padding: 0 1.5rem;
+  }
+
+  .nav-list {
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-list {
+    font-size: 1.125rem;
+  }
+}
