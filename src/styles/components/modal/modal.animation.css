@@ -1,0 +1,12 @@
+/* styles/components/modal/modal.animation.css */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95); /* ⚠️ 可能影響視覺體驗 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

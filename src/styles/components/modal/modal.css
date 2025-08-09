@@ -1,0 +1,54 @@
+/* styles/components/modal/modal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* ⚠️ 可能影響視覺體驗 */
+  backdrop-filter: blur(4px);     /* ⚠️ 可能影響視覺體驗 */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 520px;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.2); /* ⚠️ 可能影響視覺體驗 */
+  z-index: 1001;
+  animation: fade-in 0.4s ease;           /* ⚠️ 可能影響視覺體驗 */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 1rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+}

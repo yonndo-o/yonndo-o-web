@@ -1,0 +1,15 @@
+/* styles/components/modal/modal.responsive.css */
+
+@media screen and (min-width: 768px) {
+  .modal-content {
+    padding: 2.5rem 3rem;
+  }
+
+  .modal-title {
+    font-size: 1.75rem;
+  }
+
+  .modal-body {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,14 @@
+/* styles/components/modal/modal.theme.css */
+
+.modal-content {
+  background: var(--button-bg);
+  border: 1px solid var(--button-border);
+  color: var(--foreground);
+  backdrop-filter: blur(20px);           /* ⚠️ 可能影響視覺體驗 */
+}
+
+.modal-title,
+.modal-body,
+.close-button {
+  color: var(--foreground);
+}
