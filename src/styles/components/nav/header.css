@@ -1,0 +1,156 @@
+/* ─────────────────────────────────────────────
+   Header Layout
+─────────────────────────────────────────────── */
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--background);
+  z-index: 50;
+}
+
+.header-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .header-title {
+    font-size: 1.25rem;
+  }
+}
+
+.header-buttons {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .header-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+.header-toggle {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────────
+   Mobile Menu
+─────────────────────────────────────────────── */
+
+.header-menu {
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  margin-top: 0.25rem;
+  width: 10rem;
+  background-color: var(--background);
+  box-shadow: var(--shadow-lg);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  transform-origin: top;
+  transition: all 0.2s ease-out;
+  z-index: 100; /* 提高層級，避免被 navbar 擋住 */
+}
+
+.header-menu.hidden {
+  opacity: 0;
+  transform: scaleY(0);
+  pointer-events: none;
+}
+
+.header-menu.visible {
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto;
+}
+
+.header-menu-item {
+  padding: 0.5rem 1rem;
+}
+
+.header-menu-item:hover {
+  background-color: var(--hover-bg);
+}
+
+/* ─────────────────────────────────────────────
+   Header Buttons
+─────────────────────────────────────────────── */
+
+.header-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border-radius: var(--border-radius);
+  background: var(--button-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--button-border);
+  color: var(--button-text);
+  box-shadow: var(--button-shadow);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .header-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    /* gap: 0.5rem; */
+  }
+}
+
+.header-button:hover,
+.header-button:focus {
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: var(--button-shadow-hover);
+  background: var(--button-hover-bg);
+}
+
+.header-button .icon {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  color: var(--icon-color);
+}
+
+.header-button .label {
+  font-size: 1rem;
+  color: var(--foreground);
+}
+
+/* ─────────────────────────────────────────────
+   Responsive Simplification (Mobile Menu)
+─────────────────────────────────────────────── */
+
+@media (max-width: 639px) {
+  .header-menu-item .header-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    color: var(--foreground);
+  }
+
+  .header-button:hover,
+  .header-button:focus {
+    transform: none;
+    box-shadow: none;
+    background: var(--hover-bg);
+  }
+}
