@@ -1,0 +1,16 @@
+/* styles/components/nav/navitem.theme.css */
+
+.nav-item a {
+  color: var(--foreground);
+}
+
+.nav-item:hover a {
+  color: var(--accent); /* ⚠️ 可能影響視覺體驗 */
+}
+
+/* 可選：active 狀態 */
+.nav-item a.active {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent); /* ⚠️ 可能影響視覺體驗 */
+}
