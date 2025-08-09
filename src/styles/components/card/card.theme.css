@@ -1,0 +1,5 @@
+/* card.theme.css */
+.card {
+  background: var(--card-bg);
+  color: var(--card-text);
+}
