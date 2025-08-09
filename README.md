@@ -1,44 +1,31 @@
 ```
 src/
-│      
+│
 ├─app
 │  │  layout.tsx
+│  │  not-found.tsx
 │  │  page.tsx
 │  │
-│  └─(pages)
-│      ├─about
-│      │      about.module.css
-│      │      page.tsx
-│      │
-│      ├─articles
-│      │  ├─new
-│      │  │      CreateArticle.module.css
-│      │  │      page.tsx
-│      │  │
-│      │  ├─remove
-│      │  └─[id]
-│      │          article.module.css
-│      │          page.tsx
-│      │
-│      ├─links
-│      │      page.tsx
-│      │
-│      ├─login
-│      │      login.module.css
-│      │      page.tsx
-│      │
-│      ├─not-found
-│      │      page.tsx
-│      │
-│      ├─profile
-│      │      page.tsx
-│      │      profile.module.css
-│      │
-│      ├─stats
-│      │      page.tsx
-│      │
-│      └─tags
-│              page.tsx
+│  ├─(pages)
+│  │  ├─articles
+│  │  │  ├─new
+│  │  │  │      CreateArticle.module.css
+│  │  │  │      page.tsx
+│  │  │  │
+│  │  │  ├─remove
+│  │  │  └─[id]
+│  │  │          article.module.css
+│  │  │          page.tsx
+│  │  │
+│  │  ├─login
+│  │  │      page.tsx
+│  │  │
+│  │  └─profile
+│  │          page.tsx
+│  │          profile.module.css
+│  │
+│  └─[...missing]
+│          page.tsx
 │
 ├─assets
 │  ├─icons
@@ -46,42 +33,26 @@ src/
 │          default-cover.jpg
 │
 ├─components
-│  ├─ArticleList
-│  │      ArticleList.module.css
-│  │      ArticleList.tsx
-│  │
-│  ├─forms
-│  │      LoginForm.tsx
-│  │      SettingsForm.tsx
+│  │  ArticleList.tsx
 │  │
 │  ├─layout
-│  │      footer.tsx
+│  │      Footer.tsx
 │  │      header.tsx
 │  │
+│  ├─profile
+│  │      ProfileEditModal.tsx
+│  │
 │  └─ui
-│      │  Button.tsx
+│      │  FontSizeButton.tsx
 │      │  LanguageToggleButton.tsx
+│      │  Modal.tsx
+│      │  NavBar.tsx
+│      │  NavItem.tsx
 │      │  ThemeToggleButton.tsx
 │      │
-│      ├─Card
-│      │      card.module.css
-│      │      Card.tsx
-│      │
-│      ├─FontSizeButton
-│      │      FontSizeButton.module.css
-│      │      FontSizeButton.tsx
-│      │
-│      ├─Modal
-│      │      Modal.module.css
-│      │      Modal.tsx
-│      │
-│      ├─Navbar
-│      │      NavBar.module.css
-│      │      NavBar.tsx
-│      │
-│      └─NavItem
-│              NavItem.module.css
-│              NavItem.tsx
+│      └─Card
+│              card.module.css
+│              Card.tsx
 │
 ├─i18n
 │  │  config.tsx
@@ -90,6 +61,7 @@ src/
 │  └─translations
 │          en.tsx
 │          index.tsx
+│          ja.tsx
 │          zh.tsx
 │
 ├─lib
@@ -102,15 +74,66 @@ src/
 │          articleHelpers.tsx
 │
 └─styles
-    │  accessibility.css
-    │  base.css
-    │  globals.css
+    │  animations.css
+    │  global.css
     │  layout.css
-    │  responsive.css
+    │  themes.css
+    │  typography.css
     │  variables.css
     │
-    └─components
-            buttons.css
+    ├─base
+    │      accessibility.focus.css
+    │      accessibility.fontscale.css
+    │      accessibility.motion.css
+    │      accessibility.skiplink.css
+    │
+    ├─components
+    │  │  form.css
+    │  │  links.css
+    │  │  pagination.css
+    │  │
+    │  ├─articlelist
+    │  │      articlelist.css
+    │  │
+    │  ├─buttons
+    │  │      buttons.css
+    │  │      buttons.responsive.css
+    │  │      buttons.theme.css
+    │  │
+    │  ├─card
+    │  │      card.css
+    │  │      card.responsive.css
+    │  │      card.theme.css
+    │  │
+    │  ├─modal
+    │  │      modal.animation.css
+    │  │      modal.css
+    │  │      modal.responsive.css
+    │  │      modal.theme.css
+    │  │
+    │  ├─nav
+    │  │      footer.css
+    │  │      header.css
+    │  │      navbar.css
+    │  │      navbar.responsive.css
+    │  │      navbar.theme.css
+    │  │      navitem.css
+    │  │      navitem.theme.css
+    │  │
+    │  └─profile
+    │          edit-modal.css
+    │          edit-modal.responsive.css
+    │          edit-modal.theme.css
+    │
+    ├─pages
+    │      login.css
+    │      not-found.css
+    │      profile.css
+    │
+    └─responsive
+            responsive-components.css
+            responsive-layout.css
+            responsive-typography.css
 ```
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
