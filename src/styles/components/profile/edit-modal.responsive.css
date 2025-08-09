@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  .profileSection {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .fieldRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .inputField {
+    font-size: 0.95rem;
+  }
+
+  .modalActions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileSection {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .visibilityToggle {
+    font-size: 1rem;
+  }
+}
