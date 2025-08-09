@@ -1,64 +1,116 @@
 ```
 src/
-├─ app/
-│  ├─ layout.tsx
-│  ├─ globals.css
-│  ├─ page.tsx                  # 首頁
-|  ├─ lang.tsx 
-│  ├─ about/
-│  │  ├─ page.tsx               # 關於我們頁面
-|  |  └─ lang.tsx
-│  ├─ contact/
-│  │  ├─ page.tsx               # 聯絡我們頁面
-|  |  └─ lang.tsx
-│  └─ dashboard/
-│     ├─ layout.tsx             # 儀表板專屬排版
-│     ├─ page.tsx               # 儀表板首頁
-|     ├─ lang.tsx
-│     ├─ settings/
-│     │  ├─ page.tsx            # 使用者設定
-|     |  └─ lang.tsx
-│     └─ analytics/
-│        ├─ page.tsx            # 數據分析
-|        └─ lang.tsx
+│      
+├─app
+│  │  layout.tsx
+│  │  page.tsx
+│  │
+│  └─(pages)
+│      ├─about
+│      │      about.module.css
+│      │      page.tsx
+│      │
+│      ├─articles
+│      │  ├─new
+│      │  │      CreateArticle.module.css
+│      │  │      page.tsx
+│      │  │
+│      │  ├─remove
+│      │  └─[id]
+│      │          article.module.css
+│      │          page.tsx
+│      │
+│      ├─links
+│      │      page.tsx
+│      │
+│      ├─login
+│      │      login.module.css
+│      │      page.tsx
+│      │
+│      ├─not-found
+│      │      page.tsx
+│      │
+│      ├─profile
+│      │      page.tsx
+│      │      profile.module.css
+│      │
+│      ├─stats
+│      │      page.tsx
+│      │
+│      └─tags
+│              page.tsx
 │
-├─ components/
-│  ├─ ui/
-│  │  ├─ Button.tsx
-│  │  ├─ Modal.tsx
-│  │  └─ Card.tsx
-│  ├─ layout/
-│  │  ├─ Header.tsx
-│  │  ├─ Footer.tsx
-│  │  └─ Sidebar.tsx
-│  ├─ forms/
-│  |  ├─ ContactForm.tsx
-│  |  └─ SettingsForm.tsx
-│  └─ lang.tsx
-├─ lib/
-│  ├─ api.ts
-│  ├─ auth.ts
-│  └─ utils.ts
+├─assets
+│  ├─icons
+│  └─images
+│          default-cover.jpg
 │
-├─ assets/
-│  ├─ images/
-│  │  ├─ logo.png
-│  │  └─ banner.jpg
-│  └─ icons/
-│     ├─ home.svg
-│     └─ settings.svg
+├─components
+│  ├─ArticleList
+│  │      ArticleList.module.css
+│  │      ArticleList.tsx
+│  │
+│  ├─forms
+│  │      LoginForm.tsx
+│  │      SettingsForm.tsx
+│  │
+│  ├─layout
+│  │      footer.tsx
+│  │      header.tsx
+│  │
+│  └─ui
+│      │  Button.tsx
+│      │  LanguageToggleButton.tsx
+│      │  ThemeToggleButton.tsx
+│      │
+│      ├─Card
+│      │      card.module.css
+│      │      Card.tsx
+│      │
+│      ├─FontSizeButton
+│      │      FontSizeButton.module.css
+│      │      FontSizeButton.tsx
+│      │
+│      ├─Modal
+│      │      Modal.module.css
+│      │      Modal.tsx
+│      │
+│      ├─Navbar
+│      │      NavBar.module.css
+│      │      NavBar.tsx
+│      │
+│      └─NavItem
+│              NavItem.module.css
+│              NavItem.tsx
 │
-├─ styles/
-│  ├─ variables.css
-│  └─ themes.css
+├─i18n
+│  │  config.tsx
+│  │  LanguageProvider.tsx
+│  │
+│  └─translations
+│          en.tsx
+│          index.tsx
+│          zh.tsx
 │
-└─ i18n/
-   ├─ config.ts
-   ├─ useTranslation.ts
-   └─ translations/
-      ├─ en.ts
-      ├─ zh.ts
-      └─ index.ts
+├─lib
+│  │  api.tsx
+│  │  auth.tsx
+│  │  firebase.tsx
+│  │  getInitialLang.tsx
+│  │
+│  └─utils
+│          articleHelpers.tsx
+│
+└─styles
+    │  accessibility.css
+    │  base.css
+    │  globals.css
+    │  layout.css
+    │  responsive.css
+    │  variables.css
+    │
+    └─components
+            buttons.css
 ```
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
