@@ -1,0 +1,55 @@
+/* login.css */
+
+.container {
+    min-height: 100vh;
+    /* 撐滿整個視窗高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--background);
+}
+
+.loginSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+}
+
+.loginIcon {
+    width: 100px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 640px) {
+    .loginIcon {
+        width: 64px;
+    }
+}
+
+.glassbutton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: 1px solid var(--button-border);
+    box-shadow: var(--button-shadow);
+    backdrop-filter: var(--glass-blur);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glassbutton:hover,
+.glassbutton:focus {
+    transform: scale(1.05);
+    box-shadow: var(--button-shadow-hover);
+    background: var(--button-hover-bg);
+}
