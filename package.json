@@ -9,8 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "disablelint": "next lint --no-cache",
-    "export": "next export",
-    "vercel-build": "npm run prepare && next build"
+    "export": "next export"
   },
   "dependencies": {
     "firebase": "^11.10.0",
