@@ -1,0 +1,35 @@
+/* styles/components/buttons.responsive.css */
+
+@media screen and (min-width: 768px) {
+  .button,
+  .glassbutton {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .button .label,
+  .glassbutton .label {
+    font-size: 1rem;
+  }
+
+  .button .icon,
+  .glassbutton .icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button,
+  .glassbutton {
+    padding: 0.5rem 1rem;
+  }
+
+  .button .label,
+  .glassbutton .label {
+    font-size: 0.9rem;
+  }
+
+  .button .icon,
+  .glassbutton .icon {
+    font-size: 1.25rem;
+  }
+}

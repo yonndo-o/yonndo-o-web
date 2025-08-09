@@ -1,0 +1,36 @@
+/* styles/components/buttons.css */
+
+.glassbutton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--border-radius);
+  background: var(--button-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--button-border);
+  color: var(--button-text);
+  box-shadow: var(--button-shadow);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.glassbutton:hover,
+.glassbutton:focus {
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: var(--button-shadow-hover);
+  background: var(--button-hover-bg);
+}
+
+.glassbutton .icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  color: var(--icon-color);
+}
+
+.glassbutton .label {
+  font-size: 1rem;
+  color: var(--label-color);
+}
