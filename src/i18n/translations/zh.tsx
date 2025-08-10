@@ -1,9 +1,30 @@
 const zh = {
-  "article": {
-    "recentArticles": "最新文章",
-    "category": "分類",
-    "tags": "標籤",
-    "language": "語言"
+  mindscape: {
+    create:'建立待辦(僅管理員)',
+    empty:'這裡空空，也許等會兒會出現小貓',
+    title: '心智地圖',
+    journey: { title: '成長紀錄' },
+    todo: { title: '更新待辦' },
+    focus: { title: '投入方向' },
+  },
+  topics:
+  {
+    mindscape: "心跡"
+  },
+  notFound: {
+    title: '頁面不存在',
+    description: '您造訪的頁面尚未開發或已被移除。',
+    backHome: '回到首頁',
+  },
+  article: {
+    recentArticles: "最新文章",
+    category: "分類",
+    tags: "標籤",
+    language: "語言",
+    createTitle: "撰寫新文章",
+    create: "撰寫新文章",
+    title: "文章標題",
+    content: "文章內容",
   },
   profile: {
     title: "你的個人資料",
@@ -29,16 +50,19 @@ const zh = {
     editError: "更新失敗，請稍後再試。",
   },
   common: {
-    login: '登入',
+    loading: "載入中...",
+    login: "登入",
     save: "儲存",
     cancel: "取消",
     logout: "登出",
+    submit: "送出",
     editProfile: "編輯個人資料",
     close: "關閉",
     personalInfo: "個人資訊",
     articleRanking: "文章排行",
     categoryTags: "分類標籤",
     externalLinks: "外部連結",
+    mindscape: "心跡",
     memberCenter: "會員中心",
     home: "首頁",
     homepage: "首頁",
@@ -46,6 +70,22 @@ const zh = {
     contact: "聯絡我們",
     language: "語言",
     copyright: "版權所有",
+
+    // ✅ 常見錯誤與提示
+    serverError: "伺服器發生錯誤，請稍後再試。",
+    networkError: "網路連線異常，請檢查您的網路。",
+    unauthorized: "您沒有權限執行此操作。",
+    forbidden: "存取被拒絕。",
+    notFound: "找不到資源。",
+    timeout: "請求逾時，請稍候再試。",
+    unknownError: "發生未知錯誤。",
+    success: "操作成功！",
+    failure: "操作失敗，請重試。",
+    retry: "重試",
+    confirm: "確認",
+    yes: "是",
+    no: "否",
+    back: "返回",
   },
   homepage: {
     welcome: "歡迎來到我的部落格",
@@ -56,11 +96,10 @@ const zh = {
     footer: "版權所有 © 2025 四季",
     toggleLang: "切換語言",
     toggleTheme: "切換主題",
-    fontSize:
-    {
-      text: '字體大小'
-    }
-  }
+    fontSize: {
+      text: "字體大小",
+    },
+  },
 };
 
 export default zh;
