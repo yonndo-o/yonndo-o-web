@@ -4,7 +4,6 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { app } from "@/lib/firebase";
 import { useLang } from "@/i18n/LanguageProvider";
-import "@/styles/components/buttons.css";
 
 export default function LoginPage() {
   const { t } = useLang();
@@ -21,11 +20,14 @@ export default function LoginPage() {
   return (
     <main className={'container'}>
       <section className={'loginSection'}>
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
-          alt="Google Icon"
-          className={'loginIcon'}
-        />
+        <figure aria-hidden="true">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+            alt="Google Icon"
+            className="loginIcon"
+          />
+        </figure>
+
         <button onClick={handleGoogleLogin} className='glassbutton'>
           {t("common.login")}
         </button>
