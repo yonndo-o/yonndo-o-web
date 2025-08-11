@@ -18,9 +18,9 @@
 @import './responsive/responsive-typography.css';
 @import './responsive/responsive-components.css';
 
-@import url('./components/card/card.css');
-@import url('./components/card/card.theme.css');
-@import url('./components/card/card.responsive.css');
+@import './components/card/card.css';
+@import './components/card/card.theme.css';
+@import './components/card/card.responsive.css';
 @import './components/modal/modal.css';
 @import './components/modal/modal.theme.css';
 @import './components/modal/modal.animation.css';
