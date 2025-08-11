@@ -23,8 +23,8 @@ export default function LanguageToggleButton() {
       saved && ['en', 'zh'].includes(saved)
         ? saved
         : htmlLang && ['en', 'zh'].includes(htmlLang)
-        ? htmlLang
-        : 'en';
+          ? htmlLang
+          : 'en';
 
     setLang(initialLang);
     document.documentElement.lang = initialLang;
@@ -44,7 +44,7 @@ export default function LanguageToggleButton() {
     <button
       onClick={toggleLang}
       aria-label={translations[lang].toggleLang}
-      className="button flex items-center px-2 py-1 text-sm sm:text-base rounded transition duration-300"
+      className="header-button"
     >
       🌐 {lang.toUpperCase()}
     </button>
