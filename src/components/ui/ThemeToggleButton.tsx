@@ -25,7 +25,7 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button className={'button flex items-center px-2 py-1 text-sm sm:text-base rounded transition duration-300'} onClick={toggleTheme} aria-label={t('components.toggleTheme')}>
+    <button className="header-button" onClick={toggleTheme} aria-label={t('components.toggleTheme')}>
       {dark ? '☀️' : '🌙'}
     </button>
   );
