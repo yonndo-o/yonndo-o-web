@@ -6,10 +6,11 @@ export function detectLanguage(): Language {
   if (typeof window === 'undefined') return DEFAULT_LANGUAGE;
 
   const stored = localStorage.getItem('lang');
-  if (stored === 'en' || stored === 'zh') return stored;
+  if (stored === 'en' || stored === 'zh' || stored === 'ja') return stored as Language;
 
   const browserLang = navigator.language;
   if (browserLang.startsWith('zh')) return 'zh';
+  if (browserLang.startsWith('ja')) return 'ja';
   if (browserLang.startsWith('en')) return 'en';
 
   return DEFAULT_LANGUAGE;
