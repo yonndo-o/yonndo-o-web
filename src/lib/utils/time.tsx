@@ -1,18 +1,37 @@
 // src/lib/utils/time.ts
+import type { Lang } from '@/i18n/LanguageProvider';
 
-type SupportedLang = 'zh' | 'en';
+const langToLocaleMap: Record<Lang, string> = {
+  en: 'en-US',
+  zh: 'zh-TW',
+  ja: 'ja-JP',
+  fr: 'fr-FR',
+  es: 'es-ES',
+  de: 'de-DE',
+  it: 'it-IT',
+  pt: 'pt-PT',
+  ru: 'ru-RU',
+  ko: 'ko-KR',
+  vi: 'vi-VN',
+  th: 'th-TH',
+  id: 'id-ID',
+  tr: 'tr-TR',
+  ar: 'ar-SA',
+  hi: 'hi-IN',
+  bn: 'bn-BD',
+  ms: 'ms-MY',
+  nl: 'nl-NL',
+  sv: 'sv-SE',
+  pl: 'pl-PL',
+  he: 'he-IL',
+  uk: 'uk-UA',
+};
 
-/**
- * 根據語言格式化 ISO8601 時間字串為當地時間格式
- * @param isoString ISO8601 格式的時間字串
- * @param lang 語言代碼（zh 或 en）
- * @returns 當地時間格式字串
- */
-export function formatLocalTime(isoString?: string, lang: SupportedLang = 'en'): string {
+export function formatLocalTime(isoString?: string, lang: Lang = 'en'): string {
   if (!isoString) return '';
   const date = new Date(isoString);
 
-  const locale = lang === 'zh' ? 'zh-TW' : 'en-US';
+  const locale = langToLocaleMap[lang] ?? 'en-US';
   return date.toLocaleString(locale, {
     year: 'numeric',
     month: '2-digit',
@@ -20,6 +39,6 @@ export function formatLocalTime(isoString?: string, lang: SupportedLang = 'en'):
     hour: 'numeric',
     minute: '2-digit',
     second: '2-digit',
-    hour12: lang === 'en', // 英文使用 AM/PM，中文使用 24 小時制
+    hour12: locale.startsWith('en'), // 英文使用 AM/PM，其他使用 24 小時制
   });
 }
