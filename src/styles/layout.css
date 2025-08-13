@@ -1,3 +1,4 @@
+@import './variables.css';
 footer {
   text-align: center;
   font-size: 0.875rem;
@@ -11,4 +12,21 @@ footer {
     background-color: #222;
     color: #aaa;
   }
+}
+
+/* styles/layout.css */
+header,
+nav {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* styles/components/links.css（可新增） */
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
