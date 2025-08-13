@@ -1,25 +1,69 @@
 :root {
-    --background: #FEDFE1;
-    --foreground: #562E37;
-    --link: #5c4033;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
 
-    --font-sans: "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
-    --font-serif: "Noto Serif TC", "Georgia", serif;
-    --font-mono: Menlo, Monaco, monospace;
 
-    --accent: #b3d671;
-    --accent-dark: #a1c95d;
+  /* 原有色彩與字型設定 */
+  --background: #FEDFE1;
+  --foreground: #562E37;
+  --link: #5c4033;
 
-    --border-radius: 12px;
-    --transition: all 0.3s ease;
-    --footer-transparent: rgba(161, 201, 93, 0.2);
+  --font-sans: "Noto Sans TC",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  --font-serif: "Noto Serif TC",
+    "Georgia",
+    serif;
+  --font-mono: Menlo,
+    Monaco,
+    monospace;
+
+  --accent: #b3d671;
+  --accent-dark: #a1c95d;
+
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+
+  /* 藝術風格陰影與邊框 */
+  --soft-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --elegant-border: 1px solid rgba(92, 64, 51, 0.2);
+  --glass-blur: blur(12px);
+
+  /* footer */
+  --footer-transparent: rgba(161, 201, 93, 0.2);
+  --footer-gradient: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.2) 100%);
+  --footer-text: var(--foreground);
+
+  /* profile layout */
+  --profile-max-width: 600px;
+  --profile-radius: 1rem;
+  --profile-padding: 2rem;
+  --profile-gap: 1.5rem;
+  --profile-shadow: var(--soft-shadow);
+  --profile-border: var(--elegant-border);
+  --profile-bg: rgba(255, 255, 255, 0.6);
 }
 
 [data-theme="dark"] {
-    --background: #3C2F41;
-    --foreground: #B4A582;
-    --accent: #b3d671;
-    --accent-dark: #a1c95d;
-    --link: #f5e8cc;
-    --footer-transparent: rgba(161, 201, 93, 0.2);
+  --background: #3C2F41;
+  --foreground: #B4A582;
+  --accent: #b3d671;
+  --accent-dark: #a1c95d;
+  --link: #f5e8cc;
+
+  --soft-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --elegant-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(8px);
+
+  --footer-transparent: rgba(161, 201, 93, 0.2);
+  --footer-gradient: linear-gradient(135deg,
+      rgba(60, 47, 65, 0.4) 0%,
+      rgba(60, 47, 65, 0.2) 100%);
+  --footer-text: var(--foreground);
+
+  --profile-bg: rgba(60, 47, 65, 0.6);
 }
