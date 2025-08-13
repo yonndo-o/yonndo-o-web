@@ -53,6 +53,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
+
 .userAvatar:hover {
   transform: scale(1.05);
 }
@@ -114,6 +115,7 @@
 }
 
 .label {
+
   font-size: 1rem;
 }
 
@@ -189,6 +191,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -200,8 +203,24 @@
     opacity: 0;
     transform: scale(0.96);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* === Action Buttons === */
+.actionButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .actionButtons {
+    grid-template-columns: 1fr;
   }
 }
