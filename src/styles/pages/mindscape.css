@@ -7,7 +7,6 @@
   background: var(--background);
   font-family: var(--font-sans);
   color: var(--foreground);
-  /* overflow: hidden; */
 }
 
 /* 標題樣式 */
@@ -31,6 +30,7 @@
   animation: slideIn 1.5s ease-out;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  min-height: 400px; /* ✅ 避免 footer 上移 */
 }
 
 .mindscape-content::-webkit-scrollbar {
@@ -115,6 +115,39 @@
   border-bottom: 2px solid var(--accent);
 }
 
+/* Skeleton 載入樣式 */
+.mindscape-loading-placeholder {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  min-height: 300px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.timeline-event.skeleton {
+  height: 120px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: var(--soft-shadow);
+}
+
+/* Skeleton 動畫 */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* 動畫效果 */
 @keyframes fadeIn {
   from {
@@ -152,23 +185,41 @@
   }
 }
 
-/* 手機版調整 */
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) { /* 你可以改成 var(--breakpoint-lg) */
   .mindscape-content {
+    display: flex;
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y proximity; /* ✅ 垂直捲動時卡位 */
+    gap: 1rem;
   }
 
   .timeline-section {
+    display: flex;
     flex-direction: column;
-    min-width: 100%;
+    min-width: 100%; /* ✅ 滿版寬度 */
+    min-height: auto;
+    scroll-snap-align: start;
+    gap: 1rem;
   }
 
-  .timeline-event {
+  .timeline-section.visible {
+    flex-direction: column !important; /* ✅ 垂直排列 */
+    gap: 1rem;
+  }
+
+  .timeline-event,
+  .timeline-event.skeleton {
+    width: 100%; /* ✅ 滿版 */
     max-width: 100%;
     margin-bottom: 1rem;
+  }
+
+  .mindscape-loading-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .mindscape-nav {
