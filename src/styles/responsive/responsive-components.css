@@ -1,0 +1,44 @@
+/* styles/responsive/responsive-components.css */
+
+/* 卡片排版 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Modal 響應式 */
+.modal {
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--soft-shadow);
+  backdrop-filter: var(--glass-blur);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    padding: 2rem;
+  }
+}
+
+/* 表單區塊排版 */
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.form-section > * {
+  flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+  .form-section > * {
+    flex: 1 1 48%;
+  }
+}
