@@ -1,0 +1,33 @@
+/* styles/responsive/responsive-layout.css */
+
+/* Container 排版 */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Header & Footer 排版 */
+.header,
+.footer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .header,
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
