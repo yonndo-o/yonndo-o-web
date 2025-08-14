@@ -1,0 +1,8 @@
+/* 使用者偏好：減少動畫與過渡效果 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;     /* ⚠️ 可能影響視覺體驗 */
+    transition: none !important;    /* ⚠️ 可能影響視覺體驗 */
+    scroll-behavior: auto !important;
+  }
+}
