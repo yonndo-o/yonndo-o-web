@@ -1,0 +1,229 @@
+/* styles/pages/create-article.css */
+
+/* 🧱 整體容器 */
+.article-page {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--profile-bg);
+  border-radius: var(--profile-radius);
+  box-shadow: var(--profile-shadow);
+  border: var(--profile-border);
+  backdrop-filter: var(--glass-blur);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--foreground);
+}
+
+/* 🏷️ 頁面標題 */
+.page-title {
+  font-size: 2.5rem;
+  font-family: var(--font-serif);
+  text-align: center;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+/* 🌐 語言選擇區塊 */
+.language-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.language-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.75rem;
+  background: rgba(166, 165, 196, 0.2);
+  /* 藤鼠色透明版 */
+  border: 1px solid #a6a5c4;
+  /* 藤鼠色 */
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  /* 微陰影 */
+}
+
+
+/* ✅ 隱藏原生 checkbox */
+.language-option input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ✅ 選取狀態：整塊填滿 */
+.language-option.selected {
+  background: var(--accent);
+  border-color: var(--accent-dark);
+  color: var(--background);
+  font-weight: 600;
+}
+
+/* ✅ hover 效果 */
+.language-option:hover {
+  background: var(--accent-dark);
+  box-shadow: var(--soft-shadow);
+  transform: translateY(-2px);
+}
+
+
+/* 📝 多語言輸入區塊 */
+.translation-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--font-serif);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.lang-block {
+  border: var(--elegant-border);
+  border-radius: 0.75rem;
+  background: var(--background);
+  box-shadow: var(--soft-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.lang-summary {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  color: var(--foreground);
+}
+
+.lang-fields {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--profile-bg);
+}
+
+/* 🏷️ Meta 資訊區塊 */
+.meta-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+}
+
+/* ✏️ 表單輸入樣式 */
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--elegant-border);
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  transition: border-color 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(100, 100, 255, 0.2);
+}
+
+.textarea {
+  min-height: 160px;
+  resize: none;
+}
+
+/* 🚀 送出按鈕 */
+.submit-button {
+  align-self: flex-end;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: var(--foreground);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: var(--accent-dark);
+}
+
+/* 📱 RWD 支援 */
+@media (max-width: 480px) {
+  .article-page {
+    padding: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .language-grid {
+    flex-direction: column;
+  }
+
+  .lang-summary {
+    font-size: 1rem;
+  }
+
+  .lang-fields {
+    padding: 0.75rem;
+  }
+
+  .submit-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 🌙 深色主題語言選擇優化 */
+[data-theme="dark"] .language-option {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--foreground);
+}
+
+[data-theme="dark"] .language-option:hover {
+  background: var(--accent-dark);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .language-option.selected {
+  background: var(--accent);
+  border-color: var(--accent-dark);
+  color: #2c2c2c;
+  /* 或使用白色：#ffffff */
+}
