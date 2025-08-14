@@ -1,0 +1,47 @@
+/* Skeleton 載入樣式 */
+.mindscape-loading-placeholder {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  min-height: 300px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.timeline-event.skeleton {
+  height: 120px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: var(--soft-shadow);
+}
+
+/* Skeleton 動畫 */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 響應式 Skeleton */
+@media (max-width: 768px) {
+  .mindscape-loading-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .timeline-event.skeleton {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
