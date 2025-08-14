@@ -1,0 +1,18 @@
+@import '../variables.css';
+
+/* 控制整體字級縮放 */
+html[data-font-scale='sm'] {
+    font-size: 87.5%;
+}
+
+html[data-font-scale='md'] {
+    font-size: 100%;
+}
+
+html[data-font-scale='lg'] {
+    font-size: 112.5%;
+}
+
+html[data-font-scale='xl'] {
+    font-size: 125%;
+}
