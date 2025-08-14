@@ -1,0 +1,25 @@
+@import '../variables.css';
+
+/* 跳過導覽連結（鍵盤使用者） */
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    /* transition: all 0.3s ease; */
+    /* ⚠️ 可能影響視覺體驗 */
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    /* background: var(--accent); */
+    /* ⚠️ 可能影響視覺體驗 */
+    /* color: white; */
+    /* ⚠️ 可能影響視覺體驗 */
+    z-index: 1000;
+}
