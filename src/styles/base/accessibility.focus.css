@@ -1,0 +1,12 @@
+@import '../variables.css';
+/* 鍵盤導覽焦點樣式 */
+:focus-visible {
+  outline: 2px solid var(--accent); /* ⚠️ 可能影響視覺體驗 */
+  outline-offset: 2px;              /* ⚠️ 可能影響視覺體驗 */
+}
+
+/* 備用：若瀏覽器不支援 :focus-visible */
+:focus {
+  outline: 2px solid var(--accent); /* ⚠️ 可能影響視覺體驗 */
+  outline-offset: 2px;              /* ⚠️ 可能影響視覺體驗 */
+}
