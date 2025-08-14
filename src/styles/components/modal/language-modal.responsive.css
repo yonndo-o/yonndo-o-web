@@ -1,0 +1,10 @@
+@media screen and (max-width: 767px) {
+  .lang-option {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .language-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+}
