@@ -1,24 +1,27 @@
-'use client';
+// app/page.tsx
 
-import ArticleList from '@/components/ArticleList/ArticleList';
-import { useLang } from '@/i18n/LanguageProvider';
+import { redirect } from 'next/navigation';
+import { cookies, headers } from 'next/headers';
+import { SUPPORTED_LANGUAGES } from '@/i18n/config';
 
-export default function HomePage() {
-  const { t } = useLang();
+export default async function RootPage() {
+    const cookieStore = await cookies();
+    const headerStore = await headers();
+    // 取得 cookie 中的語系設定
+    const cookieLang = cookieStore.get('preferred-lang')?.value;
 
-  return (
-    <main className="
-        max-w-screen-xl   /* 限制最大寬度 */
-        w-full
-        px-4              /* 左右留白 */
-        md:px-8           /* 更寬的裝置增加留白 */
-        mx-auto           /* 中央對齊 */
-        py-8              /* 上下內距 */
-      "
->
-      <h1>{t('homepage.welcome')}</h1>
-      <p>{t('homepage.description')}</p>
-      <ArticleList />
-    </main>
-  );
+    // 取得瀏覽器語系（Accept-Language header）
+    const acceptLang = headerStore.get('accept-language') ?? '';
+    const browserLang = acceptLang.split(',')[0].split('-')[0]; // 例如 "zh-TW" → "zh"
+
+    // 判斷最終語系
+    const lang =
+        SUPPORTED_LANGUAGES.includes(cookieLang as any)
+            ? cookieLang
+            : SUPPORTED_LANGUAGES.includes(browserLang as any)
+                ? browserLang
+                : 'en'; // 預設語系
+
+    // 導向對應語系首頁
+    redirect(`/${lang}`);
 }
